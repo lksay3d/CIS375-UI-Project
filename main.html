@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proccess-Based Estimation Tool</title>
+    <link rel="stylesheet" href ="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1> Process-Based Esimation Tool</h1>
+    </header>
+    <br>
+    
+    <div id="table-container">
+        <table border = "1">
+            <tr>
+                <td>Activity</td>
+                <td>Cust Comm</td>
+                <td>Planning</td>
+                <td>Risk Analysis</td>
+                <td colspan = "2">Engineering</td>
+                
+                <td colspan = "2">Construction Release</td>
+                
+                <td>Cust Eval</td>
+                <td>Totals</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>Task</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Analysis</td>
+                <td>Design</td>
+                <td>Code</td>
+                <td>Test</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Function </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="actName"></td>
+                <td><input type="ccEst1" value="0"></td>
+                <td><input type="planEst1" value="0"></td>
+                <td><input type="raEst1" value="0"></td>
+                <td><input type="eaEst1" value="0"></td>
+                <td><input type="edEst1" value="0"></td>
+                <td><input type="crcEst1" value="0"></td>
+                <td><input type="crtEst1" value="0"></td>
+                <td><input type="ceEst1" value="0"></td>
+                <td><input type="funcTotal" value="0"></td>  
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="ccTotal"></td>
+                <td id="planTotal"></td>
+                <td id="raTotal"></td>
+                <td id="eaTotal"></td>
+                <td id="edTotal"></td>
+                <td id="crcTotal"></td>
+                <td id="crtTotal"></td>
+                <td id="ceTotal"></td>
+                <td id="Total"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>% effort</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id = "buttons">
+    <button id="addFunc">Add Function</button>
+    <button id="reFunc">Remove Function</button>
+    <a href = "./public/help.html">
+    <button id="help">Help</button>
+    </a>
+    <button id="Calculate">Calculate Totals</button>
+    </div>
+</body>
+</html>
