@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proccess-Based Estimation Tool</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1> Process-Based Estimation Tool</h1>
+    </header>
+    <br>
+    
+    <div id="table-container">
+        <table border="1" id="functionTable">
+            <thead>
+                <tr>
+                    <td>Activity</td>
+                    <td>Cust Comm</td>
+                    <td>Planning</td>
+                    <td>Risk Analysis</td>
+                    <td colspan="2">Engineering</td>
+                    <td colspan="2">Construction Release</td>
+                    <td>Cust Eval</td>
+                    <td id="columntot">Totals</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Task</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Analysis</td>
+                    <td>Design</td>
+                    <td>Code</td>
+                    <td>Test</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Function </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="function-row" id="functions">
+                    <td id="funcName"><input type="text" value=""></td>
+                    <td id="ccEst"><input type="text" value=""></td>
+                    <td id="planEst"><input type="text" value=""></td>
+                    <td id="raEst"><input type="text" value=""></td>
+                    <td id="eaEst"><input type="text" value=""></td>
+                    <td id="edEst"><input type="text" value=""></td>
+                    <td id="crcEst"><input type="text" value=""></td>
+                    <td id="crtEst"><input type="text" value=""></td>
+                    <td id="ceEst"><input type="text" value=""></td>
+                    <td id="funcTotal">0</td>  
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="totals">
+                    <td>Total</td>
+                    <td id="ccTotal">0</td>
+                    <td id="planTotal">0</td>
+                    <td id="raTotal">0</td>
+                    <td id="eaTotal">0</td>
+                    <td id="edTotal">0</td>
+                    <td id="crcTotal">0</td>
+                    <td id="crtTotal">0</td>
+                    <td id="ceTotal">0</td>
+                    <td id="Total">0</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr id="effort">
+                    <td>% effort</td>
+                    <td id="ccEffort">0%</td>
+                    <td id="planEffort">0%</td>
+                    <td id="raEffort">0%</td>
+                    <td id="eaEffort">0%</td>
+                    <td id="edEffort">0%</td>
+                    <td id="crcEffort">0%</td>
+                    <td id="crtEffort">0%</td>
+                    <td id="ceEffort">0%</td>
+                    <td id="totEffort">0%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <div id="buttons">
+        <button id="addFunc">Add Function</button>
+        <button id="reFunc">Remove Function</button>
+        <a href="help.html">
+            <button id="help">Help</button>
+        </a>
+        <button id="Calculate">Calculate Totals</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
