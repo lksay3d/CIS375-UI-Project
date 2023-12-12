@@ -118,13 +118,11 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('ceEffort').textContent = ceEffort + '%';
 
         
-        let totEffort = ccEffort + planEffort + raEffort + eaEffort + edEffort + crcEffort + crtEffort + ceEffort;
+        let totEffort = Math.round(ccEffort + planEffort + raEffort + eaEffort + edEffort + crcEffort + crtEffort + ceEffort);
         document.getElementById('totEffort').textContent = totEffort + '%';
-        });
-    
-    
+        
 
-    
+        });
 
 });
 
