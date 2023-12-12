@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
             newRow.classList.add('function-row');
             newRow.innerHTML = `
                 <td id="funcName"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="ccEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="planEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="raEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="eaEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="edEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="crcEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="crtEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
-                <td id="ceEst"><input type="text"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="ccEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="planEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="raEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="eaEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="edEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="crcEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="crtEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
+                <td id="ceEst"><input type="number"  value="" style="width: 60px;padding: 5px;border: 1px solid #ddd;border-radius: 5px;text-align:center;"></td>
                 <td id="funcTotal" style="width: 60px; padding: 5px; border: 1px solid #ddd; border-radius: 5px;">0</td>
             `;
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.function-row').forEach(row => {
             
             let total = 0;
-            row.querySelectorAll('td input[type="text"]').forEach(input => {
+            row.querySelectorAll('td input[type="number"]').forEach(input => {
                 total += parseFloat(input.value) || 0;
             });
             row.querySelector('td#funcTotal').textContent = total.toFixed(2);
@@ -98,31 +98,33 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('Total').textContent = EffortTotal.toFixed(2);
 
     
-        let ccEffort = Math.round((ccTotal / EffortTotal) * 100);
-        let planEffort = Math.round((planTotal / EffortTotal) * 100);
-        let raEffort = Math.round((raTotal / EffortTotal) * 100);
-        let eaEffort = Math.round((eaTotal / EffortTotal) * 100);
-        let edEffort = Math.round((edTotal / EffortTotal) * 100);
-        let crcEffort = Math.round((crcTotal / EffortTotal) * 100);
-        let crtEffort = Math.round((crtTotal / EffortTotal) * 100);
-        let ceEffort = Math.round((ceTotal / EffortTotal) * 100);
+        let ccEffort = ((ccTotal / EffortTotal) * 100);
+        let planEffort = ((planTotal / EffortTotal) * 100);
+        let raEffort = ((raTotal / EffortTotal) * 100);
+        let eaEffort = ((eaTotal / EffortTotal) * 100);
+        let edEffort = ((edTotal / EffortTotal) * 100);
+        let crcEffort = ((crcTotal / EffortTotal) * 100);
+        let crtEffort = ((crtTotal / EffortTotal) * 100);
+        let ceEffort = ((ceTotal / EffortTotal) * 100);
 
         
-        document.getElementById('ccEffort').textContent = ccEffort + '%';
-        document.getElementById('planEffort').textContent = planEffort + '%';
-        document.getElementById('raEffort').textContent = raEffort + '%';
-        document.getElementById('eaEffort').textContent = eaEffort + '%';
-        document.getElementById('edEffort').textContent = edEffort + '%';
-        document.getElementById('crcEffort').textContent = crcEffort + '%';
-        document.getElementById('crtEffort').textContent = crtEffort + '%';
-        document.getElementById('ceEffort').textContent = ceEffort + '%';
+        document.getElementById('ccEffort').textContent = ccEffort.toFixed(2) + '%';
+        document.getElementById('planEffort').textContent = planEffort.toFixed(2) + '%';
+        document.getElementById('raEffort').textContent = raEffort.toFixed(2) + '%';
+        document.getElementById('eaEffort').textContent = eaEffort.toFixed(2) + '%';
+        document.getElementById('edEffort').textContent = edEffort.toFixed(2) + '%';
+        document.getElementById('crcEffort').textContent = crcEffort.toFixed(2) + '%';
+        document.getElementById('crtEffort').textContent = crtEffort.toFixed(2) + '%';
+        document.getElementById('ceEffort').textContent = ceEffort.toFixed(2) + '%';
 
         
-        let totEffort = Math.round(ccEffort + planEffort + raEffort + eaEffort + edEffort + crcEffort + crtEffort + ceEffort);
-        document.getElementById('totEffort').textContent = totEffort + '%';
-        
-
+        let totEffort = ccEffort + planEffort + raEffort + eaEffort + edEffort + crcEffort + crtEffort + ceEffort;
+        document.getElementById('totEffort').textContent = totEffort.toFixed(2) + '%';
         });
+    
+    
+
+    
 
 });
 
